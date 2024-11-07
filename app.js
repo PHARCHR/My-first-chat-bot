@@ -9,10 +9,12 @@ const notFound = require("./middlewares/notFound");
 const authRouter = require("./routes/authRoutes");
 const connect = require("./db/connect");
 const botRouter = require("./routes/botRoutes");
+const homePage = require("./middlewares/home");
 
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
+app.use("/api/v1/", homePage);
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/chatBot", authentication, botRouter);
 app.use(notFound);
