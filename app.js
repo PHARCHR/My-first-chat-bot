@@ -10,7 +10,6 @@ const authRouter = require("./routes/authRoutes");
 const connect = require("./db/connect");
 const botRouter = require("./routes/botRoutes");
 
-
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
@@ -30,5 +29,3 @@ const start = () => {
   }
 };
 start();
-
-

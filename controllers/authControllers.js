@@ -1,5 +1,5 @@
 const BadRequest = require("../error/BadRequest");
-const Message=require("../models/messages")
+const Message = require("../models/messages");
 const User = require("../models/users");
 require("../error/BadRequest");
 const { StatusCodes } = require("http-status-codes");
@@ -35,7 +35,7 @@ const login = async (req, res) => {
     });
 };
 const logout = async (req, res) => {
-  await Message.deleteMany({})
+  await Message.deleteMany({});
   res.clearCookie("jwt", { httpOnly: true });
   res.status(200).json({ message: "Successfully logged out" });
 };

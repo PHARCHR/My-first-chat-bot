@@ -3,19 +3,19 @@ const mongoose = require("mongoose");
 const messagesSchema = new mongoose.Schema({
   role: {
     type: String,
-    required: true, 
+    required: true,
   },
   parts: [
     {
-      text: { 
-        type: String, 
-        required: true, 
+      text: {
+        type: String,
+        required: true,
       },
     },
   ],
   createdAt: {
     type: Date,
-    default: Date.now, 
+    default: Date.now,
   },
 });
 
