@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const startChat = require("../methods/mergerMethod");
+const startChat = require("../controllers/botController");
 
 router.post("/", startChat);
 module.exports = router;
