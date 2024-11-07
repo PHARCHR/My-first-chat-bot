@@ -14,9 +14,10 @@ const homePage = require("./middlewares/home");
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(homePage);
+
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/chatBot", authentication, botRouter);
+app.use(homePage);
 app.use(notFound);
 app.use(errorHandler);
 const start = () => {
