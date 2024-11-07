@@ -22,7 +22,7 @@ app.use(notFound);
 app.use(errorHandler);
 const start = () => {
   try {
-    connect(process.env.MONGO_URI);
+    connect(process.env.MONGO_URI||10000);
     app.listen(
       process.env.PORT,
       console.log(`Server running on port ${process.env.PORT}`)
